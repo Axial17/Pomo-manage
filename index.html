@@ -11,14 +11,15 @@
       href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <script src="/scripts/script.js" defer>
-              (function () {
-        const savedMode = localStorage.getItem("pomo-mode");
-        if (savedMode) {
-          document.documentElement.classList.add(`${savedMode}-theme`);
-        }
-      })();
-    </script>
+    <script src="scripts/script.js" defer></script>
+<script>
+  (function () {
+    const savedMode = localStorage.getItem("pomo-mode");
+    if (savedMode) {
+      document.documentElement.classList.add(`${savedMode}-theme`);
+    }
+  })();
+</script>
   </head>
   <body>
     <div>
