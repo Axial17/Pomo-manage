@@ -1,37 +1,39 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Настройки Pomo-manage</title>
-    <link rel="stylesheet" href="/styles/index.css" />
-    <link rel="stylesheet" href="/styles/settings.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/settings.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <script src="/scripts/script.js" defer>
-              (function () {
+    
+    <script src="../scripts/script.js" defer></script>
+    <script>
+      (function () {
         const savedMode = localStorage.getItem("pomo-mode");
         if (savedMode) {
           document.documentElement.classList.add(`${savedMode}-theme`);
         }
       })();
     </script>
-    <script src="/scripts/settings.js" defer></script>
+    <script src="../scripts/settings.js" defer></script>
   </head>
   <body>
     <div class="header-container">
       <header class="header element">
-        <a href="/index.html"
-          ><img src="/assets/logo.svg" alt="logo" class="logo"
-        /></a>
-        <a href="/index.html" class="button">Таймер</a>
-        <a href="/pages/about.html" class="button">Информация</a>
-        <a href="/pages/form.html" class="button" id="open-aside-header">Задачи</a>
-        <a href="/pages/settings.html" class="button chosen">Настройки</a>
+        <a href="../index.html">
+          <img src="../assets/logo.svg" alt="logo" class="logo" />
+        </a>
+        <a href="../index.html" class="button">Таймер</a>
+        <a href="about.html" class="button">Информация</a>
+        <a href="form.html" class="button" id="open-aside-header">Задачи</a>
+        <a href="settings.html" class="button chosen">Настройки</a>
       </header>
     </div>
     <main class="main-container">
@@ -61,7 +63,7 @@
 
           <div class="settings-actions">
             <button type="submit" class="button">Сохранить</button>
-            <a href="index.html" class="button">Назад</a>
+            <a href="../index.html" class="button">Назад</a>
           </div>
         </form>
       </div>
