@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Таймер - Pomo-manage</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/scripts/script.js" defer>
+              (function () {
+        const savedMode = localStorage.getItem("pomo-mode");
+        if (savedMode) {
+          document.documentElement.classList.add(`${savedMode}-theme`);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div>
+      <div class="header-container">
+        <header class="header element">
+          <a href="/index.html"
+            ><img src="/assets/logo.svg" alt="logo" class="logo"
+          /></a>
+          <a href="/index.html" class="button chosen">Таймер</a>
+          <a href="/pages/about.html" class="button">Информация</a>
+          <a href="/pages/form.html" class="button">Задачи</a>
+          <a href="/pages/settings.html" class="button">Настройки</a>
+        </header>
+      </div>
+      <aside id="task-aside" class="element">
+        <div class="aside-header">
+          <h2>Мои задачи</h2>
+          <button id="close-aside" class="icon-btn close-aside-btn">
+            <span></span>
+          </button>
+        </div>
+
+        <div id="task-list" class="task-list"></div>
+      </aside>
+
+      <button id="open-aside" class="mobile-toggle element">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+      <main class="main-container">
+        <div class="main element">
+          <div class="timer-controls">
+            <div id="work" data-time="1500" class="button chosen">
+              <p>Работа</p>
+            </div>
+            <div id="short-rest" data-time="300" class="button">
+              <p>Перерыв</p>
+            </div>
+            <div id="long-rest" data-time="900" class="button">
+              <p>Отдых</p>
+            </div>
+          </div>
+          <div id="timer" class="timer">25:00</div>
+          <div class="timer-controls">
+            <div id="start-btn" class="button"><p>Старт</p></div>
+            <div id="reset-btn" class="button"><p>Сброс</p></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

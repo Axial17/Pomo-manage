@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Добавить задачу - Pomo-manage</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/form.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        const savedMode = localStorage.getItem("pomo-mode");
+        if (savedMode) {
+          document.documentElement.classList.add(`${savedMode}-theme`);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="header-container">
+      <header class="header element">
+        <a href="/index.html"
+          ><img src="/assets/logo.svg" alt="logo" class="logo"
+        /></a>
+        <a href="/index.html" class="button">Таймер</a>
+        <a href="/pages/about.html" class="button">Информация</a>
+        <a href="/pages/form.html" class="button chosen">Задачи</a>
+        <a href="/pages/settings.html" class="button">Настройки</a>
+      </header>
+    </div>
+
+    <main class="main-container">
+      <div class="main element form-container">
+        <h1 class="no-select">Новая задача</h1>
+
+        <form id="pomo-form" class="auth-form">
+          <div class="input-group">
+            <label for="task-name">Название задачи</label>
+            <input type="text" id="task-name" />
+          </div>
+
+          <div class="input-group">
+            <label for="task-category">Категория</label>
+            <input type="text" id="task-category" />
+          </div>
+
+          <div class="input-group">
+            <label for="task-date">Дата дедлайна</label>
+            <input type="date" id="task-date" />
+          </div>
+
+          <div class="controls">
+            <button type="submit" class="cont-button">Сохранить</button>
+            <a href="/index.html" class="cont-button">Отмена</a>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="/scripts/form.js"></script>
+  </body>
+</html>

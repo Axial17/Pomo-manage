@@ -1,0 +1,80 @@
+/* --- СТИЛИ ДЛЯ НАСТРОЕК --- */
+.settings-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5vh 2vw;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1vh;
+}
+
+.setting-item label {
+  font-size: 1vw;
+  color: #fff;
+}
+
+.setting-item input[type="number"] {
+  width: 4vw;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5vw;
+  color: white;
+  font-family: "Comfortaa", sans-serif;
+  padding: 0.5vh;
+  text-align: center;
+  outline: none;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 1.5vw;
+  height: 1.5vw;
+  cursor: pointer;
+  accent-color: #fff;
+}
+
+.settings-actions {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  margin-top: 3vh;
+  width: 100%;
+}
+
+.settings-actions .button {
+  width: 40%;
+  max-width: 12vw;
+  border: none;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.button {
+  height: 5vh;
+}
+
+@media (max-width: 600px) {
+  .setting-item label {
+    font-size: 4.5vw;
+  }
+  .setting-item input[type="number"] {
+    width: 15vw;
+  }
+  .checkbox-group input[type="checkbox"] {
+    width: 6vw;
+    height: 6vw;
+  }
+  .settings-actions {
+    gap: 15vw;
+  }
+  .settings-actions .button {
+    width: 30%;
+    max-width: none;
+    font-size: 4vw;
+  }
+}

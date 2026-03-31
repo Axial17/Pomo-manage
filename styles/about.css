@@ -1,0 +1,185 @@
+.about-content {
+  justify-content: flex-start;
+  padding: 2vw;
+  text-align: left;
+  overflow-y: auto;
+  height: 80vh !important;
+}
+
+.about-content h1 {
+  font-size: 2vw;
+  margin-top: 0;
+  margin-bottom: 2vh;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1vh;
+  width: 100%;
+}
+
+.about-content h3 {
+  font-size: 1.2vw;
+  margin-top: 3vh;
+  color: #ffffff;
+}
+
+.about-content p,
+.about-content li {
+  font-size: 1vw;
+  line-height: 1.6;
+  color: rgb(222, 218, 218);
+  margin-bottom: 1.5vh;
+}
+
+.about-content ol {
+  padding-left: 1.5vw;
+  margin: 0;
+}
+
+.about-footer {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 2vh;
+}
+
+.try-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 10 vw;
+  width: 33%;
+  height: 70%;
+  max-height: 7vh;
+  text-decoration: none;
+  color: rgb(222, 218, 218);
+  background-color: rgba(255, 255, 255, 0.066);
+  transition: 0.5s;
+  user-select: none;
+  border-radius: 1vw;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.try-button:hover {
+  color: rgb(179, 179, 179);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.try-button:active {
+  background-color: rgba(0, 0, 0, 0.124);
+  transition: 0.1s;
+  transform: scale(0.95);
+}
+
+@media (max-width: 600px) {
+  .header {
+    width: 95% !important;
+    justify-content: flex-start !important; 
+    overflow-x: auto;
+    gap: 3vw;
+    padding: 0 4vw;
+  }
+
+  .header .button {
+    min-width: 32vw !important;
+    flex-shrink: 0; 
+    font-size: 4vw !important;
+  }
+
+  .main {
+    width: 92% !important; 
+    height: auto !important; 
+    min-height: 70vh;
+    padding: 4vh 5vw !important; 
+    justify-content: flex-start !important;
+  }
+
+  .about-content h1 {
+    font-size: 7vw !important; 
+    margin-bottom: 3vh;
+  }
+
+  .about-content h3 {
+    font-size: 5vw !important;
+    margin-top: 4vh;
+  }
+
+  .about-content p,
+  .about-content li {
+    font-size: 4.5vw !important;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .about-content ol {
+    padding-left: 6vw;
+  }
+
+  /* Кнопка внизу */
+  .try-button {
+    width: 100% !important;
+    height: 8vh !important;
+    margin-top: 5vh;
+  }
+
+  .try-button p {
+    font-size: 5vw !important;
+  }
+}
+
+.quote-card {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 3vh 0;
+  padding: 2vh 1.5vw;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1vh;
+  border-left: 3px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+#quote-text {
+  font-size: 1vw;
+  font-style: italic;
+  color: #ffffff;
+  margin-bottom: 1vh;
+}
+
+.refresh-icon {
+  position: absolute;
+  bottom: 1vh;
+  right: 1vw;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  font-size: 1.1vw;
+  transition: 0.3s;
+}
+
+#quote-author {
+  display: block;
+  width: 100%;
+  margin-top: 1.5vh;
+  font-size: 0.8vw;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1vw;
+  opacity: 0.8;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  #quote-author {
+    font-size: 3.5vw !important;
+    letter-spacing: 0.5vw;
+  }
+
+  #quote-text {
+    font-size: 4.5vw !important;
+  }
+}
