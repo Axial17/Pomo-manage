@@ -11,12 +11,12 @@
       rel="stylesheet"
     />
     <script>
-      (function () {
-        const savedMode = localStorage.getItem("pomo-mode");
-        if (savedMode) {
-          document.documentElement.classList.add(`${savedMode}-theme`);
-        }
-      })();
+(function () {
+  const savedMode = localStorage.getItem("pomo-mode");
+  if (savedMode && savedMode !== "work") { // "work" — это тема по умолчанию, её добавлять не надо
+    document.body.classList.add(`${savedMode}-theme`);
+  }
+})();
     </script>
     <script src="../scripts/quote.js" defer></script>
   </head>
